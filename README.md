@@ -91,3 +91,7 @@ MVPリリース時に作っていたいもの
   - Devise
   - simple_calendar
   - line-bot-api
+
+
+### 画面遷移図
+Figma：https://www.figma.com/design/TKYTGl8lAQCmwPjlHiZIoV/%E9%80%9A%E9%99%A2%E7%AE%A1%E7%90%86%E3%82%A2%E3%83%97%E3%83%AA%E3%80%80%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&p=f&t=oTOPyTQU20oXrSg8-0
