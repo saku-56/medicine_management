@@ -1,0 +1,85 @@
+Table "Users" {
+  "id" integer [pk]
+  "name" string [not null]
+  "email" string [not null]
+  "encrypted_password" string [not null]
+  "created_at" timestamp [not null]
+  "updated_at" timestamp [not null]
+}
+
+Table "UserMedicines" {
+  "id" integer [pk]
+  "user_id" integer [ref: > Users.id]
+  "medicine_name" string [not null]
+  "dosage_per_time" integer [not null]
+  "prescribed_amount" integer [not null]
+  "current_stock" integer
+  "start_date_of_medication" date [not null]
+  "created_at" timestamp [not null]
+  "updated_at" timestamp [not null]
+}
+
+Table "Hospitals" {
+  "id" integer [pk]
+  "user_id" integer [ref: > Users.id]
+  "hospital_name" string [not null]
+  "description" text
+  "created_at" timestamp [not null]
+  "updated_at" timestamp [not null]
+}
+
+Table "HospitalSchedules" {
+  "id" integer [pk]
+  "hospital_id" integer [ref: - Hospitals.id]
+
+  "monday_am_start" time
+  "monday_am_end" time
+  "monday_pm_start" time
+  "monday_pm_end" time
+
+  "tuesday_am_start" time
+  "tuesday_am_end" time
+  "tuesday_pm_start" time
+  "tuesday_pm_end" time
+
+  "wednesday_am_start" time
+  "wednesday_am_end" time
+  "wednesday_pm_start" time
+  "wednesday_pm_end" time
+
+  "thuesday_am_start" time
+  "thuesday_am_end" time
+  "thuesday_pm_start" time
+  "thuesday_pm_end" time
+
+  "friday_am_start" time
+  "friday_am_end" time
+  "friday_pm_start" time
+  "friday_pm_end" time
+
+  "saturday_am_start" time
+  "saturday_am_end" time
+  "saturday_pm_start" time
+  "saturday_pm_end" time
+
+  "sunday_am_start" time
+  "sunday_am_end" time
+  "sunday_pm_start" time
+  "sunday_pm_end" time
+
+  "holiday_am_start" time
+  "holiday_am_end" time
+  "holiday_pm_start" time
+  "holiday_pm_end" time
+  "created_at" timestamp [not null]
+  "updated_at" timestamp [not null]
+}
+
+Table "HospitalVisitSchedules" {
+  "id" integer [pk]
+  "user_id" integer [ref: > Users.id]
+  "hospital_id" string [ref: > Hospitals.id]
+  "visit_date" date [not null]
+  "created_at" timestamp [not null]
+  "updated_at" timestamp [not null]
+}
