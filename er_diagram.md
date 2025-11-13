@@ -1,1 +1,1 @@
-[![Image from Gyazo](https://i.gyazo.com/0711b67620d466f734917876bee94cff.png)](https://gyazo.com/0711b67620d466f734917876bee94cff)
+[![Image from Gyazo](https://i.gyazo.com/831c2f1091834f685a90f51c9d22d347.png)](https://gyazo.com/831c2f1091834f685a90f51c9d22d347)

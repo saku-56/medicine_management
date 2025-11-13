@@ -22,7 +22,7 @@ Table "UserMedicines" {
 Table "Hospitals" {
   "id" integer [pk]
   "user_id" integer [ref: > Users.id]
-  "hospital_name" string [not null]
+  "name" string [not null]
   "description" text
   "created_at" timestamp [not null]
   "updated_at" timestamp [not null]
@@ -31,46 +31,10 @@ Table "Hospitals" {
 Table "HospitalSchedules" {
   "id" integer [pk]
   "hospital_id" integer [ref: - Hospitals.id]
-
-  "monday_am_start" time
-  "monday_am_end" time
-  "monday_pm_start" time
-  "monday_pm_end" time
-
-  "tuesday_am_start" time
-  "tuesday_am_end" time
-  "tuesday_pm_start" time
-  "tuesday_pm_end" time
-
-  "wednesday_am_start" time
-  "wednesday_am_end" time
-  "wednesday_pm_start" time
-  "wednesday_pm_end" time
-
-  "thuesday_am_start" time
-  "thuesday_am_end" time
-  "thuesday_pm_start" time
-  "thuesday_pm_end" time
-
-  "friday_am_start" time
-  "friday_am_end" time
-  "friday_pm_start" time
-  "friday_pm_end" time
-
-  "saturday_am_start" time
-  "saturday_am_end" time
-  "saturday_pm_start" time
-  "saturday_pm_end" time
-
-  "sunday_am_start" time
-  "sunday_am_end" time
-  "sunday_pm_start" time
-  "sunday_pm_end" time
-
-  "holiday_am_start" time
-  "holiday_am_end" time
-  "holiday_pm_start" time
-  "holiday_pm_end" time
+  "day_of_week" integer [note: "enum: 0=monday, 1=tuesday, 2=wednesday, 3=thursday, 4=friday, 5=saturday, 6=sunday, 7=holiday"]
+  "period" integer [note: "enum: 0=morning, 1=afternoon"]
+  "start_time" time
+  "end_time" time
   "created_at" timestamp [not null]
   "updated_at" timestamp [not null]
 }
