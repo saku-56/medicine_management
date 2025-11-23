@@ -74,3 +74,5 @@ group :test do
   # ダミーデータ生成
   gem "faker"
 end
+
+gem "tailwindcss-rails"
