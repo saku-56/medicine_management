@@ -48,10 +48,29 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # エラー画面をわかりやすく成形する
+  gem "better_errors"
+  # ブラウザでirbが使える
+  gem "binding_of_caller"
+  gem "pry-rails"
+  gem "pry-byebug"
+  # 基本的なRubyコードのLint機能
+  gem "rubocop", require: false
+  # Rails特有のルールを追加
+  gem "rubocop-rails", require: false
+  # RSpec特有のルールを追加
+  gem "rubocop-rspec", require: false
+  # パフォーマンス関連のルールを追加
+  gem "rubocop-performance", require: false
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "rspec-rails"
+  # テストデータ作成
+  gem "factory_bot_rails"
+  # ダミーデータ生成
+  gem "faker"
 end
